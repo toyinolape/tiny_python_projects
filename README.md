@@ -25,4 +25,4 @@ The preparation for this project followed these steps:
 - [x] Chapter 3: [Going on a picnic; Working with lists](https://github.com/toyinolape/tiny_python_projects/tree/master/03_picnic)
 - [x] Chapter 4: [Jumping the Five; Working with dictionaries](https://github.com/toyinolape/tiny_python_projects/tree/master/04_jump_the_five)
 - [x] Chapter 5: [Howlers; Working with files and STDOUT](https://github.com/toyinolape/tiny_python_projects/tree/master/05_howler)
-- [ ] Chapter 6: [Words Count; Reading files and STDIN, iterating lists, formatting strings](https://github.com/toyinolape/tiny_python_projects/tree/master/06_wc)
+- [x] Chapter 6: [Words Count; Reading files and STDIN, iterating lists, formatting strings](https://github.com/toyinolape/tiny_python_projects/tree/master/06_wc)
