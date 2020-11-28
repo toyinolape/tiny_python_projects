@@ -1,56 +1,50 @@
 #!/usr/bin/env python3
 """
 Author : toyin <toyin@localhost>
-Date   : 2020-11-17
-Purpose: Howler Exercise
+Date   : 2020-11-24
+Purpose: Rock the Casbah
 """
 
 import argparse
-import os
-import sys
 import io
-
+import os 
+import sys
 
 # --------------------------------------------------
 def get_args():
-    """get command-line arguments"""
+    """Get command-line arguments"""
 
     parser = argparse.ArgumentParser(
-        description='Howler Exercise',
+        description='Rock the Casbah',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument('text',
                         metavar='text',
-                        type=str,
                         help='Input string or file')
 
     parser.add_argument('-o',
                         '--outfile',
-                        help='Output filename',
-                        metavar='str',
+                        help='Output filename (default: ',
+                        metavar='text',
                         type=str,
                         default='')
 
     args = parser.parse_args()
 
-    if os.path.isfile(args.text):
-        args.text = open(args.text)
-    else:
-        args.text = io.StringIO(args.text + '\n')
+    if os.path.isfile( args.text):
+        args.text = open(args.text).read()
 
     return args
 
 
 # --------------------------------------------------
 def main():
-    """Convert to uppercase"""
+    """Make a jazz noise here"""
 
     args = get_args()
     out_fh = open(args.outfile, 'wt') if args.outfile else sys.stdout
-    for line in args.text:
-        out_fh.write(line.upper())
-    out_fh.close()
 
+    print(args.text.upper(), file= out_fh)
 
 # --------------------------------------------------
 if __name__ == '__main__':
