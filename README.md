@@ -26,3 +26,5 @@ The preparation for this project followed these steps:
 - [x] Chapter 4: [Jumping the Five; Working with dictionaries](https://github.com/toyinolape/tiny_python_projects/tree/master/04_jump_the_five)
 - [x] Chapter 5: [Howlers; Working with files and STDOUT](https://github.com/toyinolape/tiny_python_projects/tree/master/05_howler)
 - [x] Chapter 6: [Words Count; Reading files and STDIN, iterating lists, formatting strings](https://github.com/toyinolape/tiny_python_projects/tree/master/06_wc)
+- [ ] Chapter 7: [Gashlycrumb: Looking items up in a dictionary]()
+- [ ] Chapter 8: [Apples and Bananas: FInd and replace]()
