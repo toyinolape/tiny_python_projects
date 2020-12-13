@@ -2,11 +2,10 @@
 """
 Author : toyin <toyinolape@yahoo.com>
 Date   : 2020-11-29
-Purpose: Rock the Casbah
+Purpose: Word Count Exercise
 """
 
 import argparse
-import io
 import sys
 
 
@@ -15,38 +14,15 @@ def get_args():
     """Get command-line arguments"""
 
     parser = argparse.ArgumentParser(
-        description='Rock the Casbah',
+        description='Word Count Exercise',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
-    parser.add_argument('positional',
-                        metavar='str',
-                        help='A positional argument')
-
-    parser.add_argument('-a',
-                        '--arg',
-                        help='A named string argument',
-                        metavar='str',
-                        type=str,
-                        default='')
-
-    parser.add_argument('-i',
-                        '--int',
-                        help='A named integer argument',
-                        metavar='int',
-                        type=int,
-                        default=0)
-
-    parser.add_argument('-f',
-                        '--file',
-                        help='A readable file',
+    parser.add_argument('file',
+                        help='Input files(s)',
                         metavar='FILE',
+                        nargs="*",
                         type=argparse.FileType('rt'),
-                        default=None)
-
-    parser.add_argument('-o',
-                        '--on',
-                        help='A boolean flag',
-                        action='store_true')
+                        default=[sys.stdin])
 
     return parser.parse_args()
 
@@ -56,18 +32,25 @@ def main():
     """Make a jazz noise here"""
 
     args = get_args()
-    str_arg = args.arg
-    int_arg = args.int
-    file_arg = args.file
-    flag_arg = args.on
-    pos_arg = args.positional
 
-    print(f'str_arg = "{str_arg}"')
-    print(f'int_arg = "{int_arg}"')
-    print('file_arg = "{}"'.format(file_arg.name if file_arg else ''))
-    print(f'flag_arg = "{flag_arg}"')
-    print(f'positional = "{pos_arg}"')
+    tot_line, tot_words, tot_bytes = 0, 0, 0
+    
+    for fh in args.file:
+        num_line, num_words, num_bytes = 0, 0, 0
+        for line in fh:
+            num_line += 1
+            num_words += len(line.split())
+            num_bytes += len(line)
 
+        tot_line += num_line
+        tot_words += num_words
+        tot_bytes += num_bytes
+        
+        print(f'{num_line:8}{num_words:8}{num_bytes:8} {fh.name}')
+        
+
+    if len(args.file) > 1:
+        print(f'{tot_line:8}{tot_words:8}{tot_bytes:8} total')
 
 # --------------------------------------------------
 if __name__ == '__main__':
