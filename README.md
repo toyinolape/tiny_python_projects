@@ -28,3 +28,5 @@ The preparation for this project followed these steps:
 - [x] Chapter 6: [Words Count; Reading files and STDIN, iterating lists, formatting strings](https://github.com/toyinolape/tiny_python_projects/tree/master/06_wc)
 - [x] Chapter 7: [Gashlycrumb: Looking items up in a dictionary](https://github.com/toyinolape/tiny_python_projects/tree/master/07_gashlycrumb)
 - [x] Chapter 8: [Apples and Bananas: Find and replace](https://github.com/toyinolape/tiny_python_projects/tree/master/08_apples_and_bananas)
+- [x] Chapter 9: [Dial-a-curse: Generating random insults from lists of words](https://github.com/toyinolape/tiny_python_projects/tree/master/09_abuse)
+- [x] Chapter 10: [Telephone: Randomly mutating strings](https://github.com/toyinolape/tiny_python_projects/tree/master/10_telephone)
